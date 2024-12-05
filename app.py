@@ -21,6 +21,7 @@ def query():
 
     try:
         database_query = translate_query(user_query)
+        print("database_query*************"+database_query)
         if "SELECT" in database_query.upper():
             result = fetch_postgres_data(database_query)
         else:
